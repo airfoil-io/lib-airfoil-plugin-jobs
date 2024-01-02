@@ -23,6 +23,12 @@ java {
 
 repositories {
 	mavenCentral()
+
+    listOf(
+        Repositories.Airfoil.LibCommon,
+    ).forEach { repo ->
+        repo.maven(this, gprUser, gprKey)
+    }
 }
 
 publishing {
